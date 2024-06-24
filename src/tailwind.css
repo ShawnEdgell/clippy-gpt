@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply h-full;
+}
+
+#chat-container {
+  @apply flex flex-col h-full;
+}
+
+#messages {
+  @apply flex-grow border p-3 overflow-y-auto bg-gray-50 rounded;
+}
+
+.input-container {
+  @apply flex mt-3;
+}
+
+.message.me {
+  @apply bg-blue-100;
+}
+
+.message.chatgpt {
+  @apply bg-gray-100;
+}

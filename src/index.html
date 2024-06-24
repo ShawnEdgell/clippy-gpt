@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT Electron App</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.openai.com;"
+    />
+    <link href="tailwind.output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans h-screen flex flex-col">
+    <!-- Chat Container -->
+    <div
+      id="chat-container"
+      class="flex flex-col h-full mx-auto bg-white p-4 shadow-lg w-full"
+    >
+      <div
+        id="messages"
+        class="flex-grow border p-3 overflow-y-auto bg-gray-50 rounded"
+      ></div>
+      <div class="flex mt-3">
+        <input
+          type="text"
+          id="input"
+          class="flex-1 p-2 border rounded-l-lg focus:outline-none"
+          placeholder="Type a message..."
+        />
+        <button
+          id="sendButton"
+          class="p-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
